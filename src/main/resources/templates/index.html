@@ -8,7 +8,18 @@
 
 </head>
 <body>
-<h1>Pick a planet:</h1>
-
+<h1>Planets of Our Solar System</h1>
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th>Planet Name</th>
+        <th>Length of Year (in Earth days)</th>
+    </tr>
+    </thead>
+    <tr th:each="planet : ${planets}">
+        <td th:text="${planet.displayName}"></td>
+        <td th:text="${planet.yearLength}"></td>
+    </tr>
+</table>
 </body>
 </html>
